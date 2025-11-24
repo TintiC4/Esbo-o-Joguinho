@@ -4,15 +4,18 @@
   height: 600px;
   background-color: rgb(40, 40, 40);
   border: 2px solid rgb(240, 240, 240);
+  color: rgb(200, 200, 200);
   overflow: hidden; /* evita fuga da tela */
 }
 
 #player {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  background-color: rgb(200, 200, 200);
-  top: 100px; 
+  top: 100px;
   left: 100px;
-  transition: top 0.1s linear, left 0.1s linear;
+  font-family: monospace; /* mantém alinhamento do ASCII */
+  white-space: pre;        /* respeita espaços e quebras de linha */
+  line-height: 1;          /* reduz espaçamento vertical */
+  text-align: center;      /* centraliza o boneco */
+  cursor: default;         /* só opcional */
 }
+
