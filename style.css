@@ -27,8 +27,8 @@ body {
 
 #player {
   position: absolute;
-  top: 100px;
-  left: 100px;
+  top: 270px;
+  left: 380px;
   font-family: monospace; /* mantém alinhamento do ASCII */
   white-space: pre;        /* respeita espaços e quebras de linha */
   line-height: 1;          /* reduz espaçamento vertical */
