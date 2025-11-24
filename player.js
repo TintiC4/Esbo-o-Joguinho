@@ -5,75 +5,62 @@ let style = window.getComputedStyle(player);
 let topPos = parseInt(style.top);
 let leftPos = parseInt(style.left);
 
-const speed = 4;
+const speed = 2;
 
 // === Sprites ASCII por direção ===
 const walkFrames = {
   up: [
-    `
-O
+`O
 /|\\
 / \\`,
-    `
-O
+`O
 /|\\
 / >`,
-    `
-O
+`O
 /|\\
 < \\`
   ],
   down: [
-`
-O
+`O
 /|\\
 / \\`,
-    `
-O
+`O
 /|\\
 / >`,
-    `
-O
+`O
 /|\\
 < \\`
   ],
   left: [
-    `
-O
+`O
 /|\\
 / \\`,
-`
-O
+`O
 /|\\
-< \\ `,
-`
-O
+< \\`,
+`O
 /|\\
 / \\`,
-`
-O
+`O
 /|\\
 /<`
   ],
   right: [
-    `
-O
+`O
 /|\\
 / \\`,
-    `
-O
+`O
 /|\\
 / >`,
-`
-O
+`O
 /|\\
 / \\`,
-`
-O
+`O
 /|\\
  >\\`
-  ]
-};
+]};
+
+
 let currentFrame = 0;
 let currentDirection = "down"; // direção inicial
 
