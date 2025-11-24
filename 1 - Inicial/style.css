@@ -1,0 +1,73 @@
+/* reset mínimo */
+* { box-sizing: border-box; }
+html, body {
+  height: 100%;
+  margin: 0;
+  background: rgb(25,25,25);
+  color: rgb(240,240,240);
+  font-family: system-ui, sans-serif;
+}
+
+/* container centralizado */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* viewport do jogo */
+.world {
+  position: relative;
+  width: 75vw;
+  height: 60vh;
+  border: 5px solid rgb(240,240,240);
+  overflow: hidden;
+  background: linear-gradient(#286d2a, #1f4f1b); /* só visual */
+  transition: opacity 260ms ease; /* usado para fade on map change */
+}
+
+/* grid do mapa: será configurada por JS via grid-template e --tile-size */
+#map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+}
+
+/* cada tile */
+.tile {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05em;
+  user-select: none;
+}
+
+/* tipos de tile */
+.tile.empty { background: transparent; }
+.tile.grass { background: rgba(0,0,0,0.06); }
+.tile.tree  { background: rgba(10,60,10,0.6); color: #0f0; font-size: 1.6em; }
+
+/* personagem */
+#you {
+  position: absolute;
+  width: var(--tile-size);
+  height: var(--tile-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  font-size: 1.2em;
+  transform: translate(0,0);
+  transition: none; /* movimento por passos, sem transição CSS */
+}
+
+/* quando estiver em transição entre mapas, reduz opacidade do world */
+.world.fade-out {
+  opacity: 0;
+}
