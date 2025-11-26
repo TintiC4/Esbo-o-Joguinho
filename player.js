@@ -84,7 +84,7 @@ function stepAnimation(direction, now) {
 }
 
 // Loop de movimento
-function movePlayer(timestamp) {
+function movePlayer(timestamp) { 
   let moved = false;
 
   if (keys["w"]) { 

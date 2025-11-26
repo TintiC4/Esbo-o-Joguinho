@@ -3,7 +3,7 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  /*overflow: hidden;*/
   background: rgb(20,20,20);
 }
 
@@ -23,6 +23,7 @@ body {
   border: 2px solid rgb(240, 240, 240);
   color: rgb(200, 200, 200);
   overflow: hidden; /* evita fuga da tela */
+  flex-shrink: 0;
 }
 
 #player {
@@ -33,6 +34,6 @@ body {
   white-space: pre;        /* respeita espaços e quebras de linha */
   line-height: 1;          /* reduz espaçamento vertical */
   text-align: center;      /* centraliza o boneco */
-  cursor: default;         /* só opcional */
+  cursor: pointer;         /* só opcional */
 }
 
